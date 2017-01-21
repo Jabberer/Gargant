@@ -1,0 +1,35 @@
+﻿  stdafx.cpp
+c:\users\adamj\documents\visual studio 2015\projects\gargant\gargant\game_data.h(2): warning C4099: 'Game_Data': type name first seen using 'class' now seen using 'struct'
+  c:\users\adamj\documents\visual studio 2015\projects\gargant\gargant\game_data.h(2): note: see declaration of 'Game_Data'
+  Tokenizer.cpp
+  Token.cpp
+  Scripting_Engine.cpp
+  Puzzle.cpp
+  Parser.cpp
+c:\users\adamj\documents\visual studio 2015\projects\gargant\gargant\parser.cpp(8): warning C4018: '<': signed/unsigned mismatch
+  init.cpp
+  grammar.cpp
+  Gargant.cpp
+c:\users\adamj\documents\visual studio 2015\projects\gargant\gargant\gargant.cpp(37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\adamj\documents\visual studio 2015\projects\gargant\gargant\gargant.cpp(39): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\adamj\documents\visual studio 2015\projects\gargant\gargant\gargant.cpp(140): warning C4018: '<': signed/unsigned mismatch
+c:\users\adamj\documents\visual studio 2015\projects\gargant\gargant\gargant.cpp(146): warning C4244: '+=': conversion from 'float' to 'unsigned int', possible loss of data
+c:\users\adamj\documents\visual studio 2015\projects\gargant\gargant\gargant.cpp(157): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\adamj\documents\visual studio 2015\projects\gargant\gargant\gargant.cpp(158): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\adamj\documents\visual studio 2015\projects\gargant\gargant\gargant.cpp(163): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\adamj\documents\visual studio 2015\projects\gargant\gargant\gargant.cpp(164): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\adamj\documents\visual studio 2015\projects\gargant\gargant\gargant.cpp(165): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\adamj\documents\visual studio 2015\projects\gargant\gargant\gargant.cpp(166): warning C4018: '>': signed/unsigned mismatch
+c:\users\adamj\documents\visual studio 2015\projects\gargant\gargant\gargant.cpp(168): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Game_Data.cpp
+  Event_Handler.cpp
+  Binder.cpp
+  Generating Code...
+c:\users\adamj\documents\visual studio 2015\projects\gargant\gargant\binder.cpp(86): warning C4715: 'Binder::translate': not all control paths return a value
+c:\users\adamj\documents\visual studio 2015\projects\gargant\gargant\binder.cpp(78): warning C4715: 'Binder::translate': not all control paths return a value
+c:\users\adamj\documents\visual studio 2015\projects\gargant\gargant\binder.cpp(94): warning C4715: 'Binder::translate': not all control paths return a value
+c:\users\adamj\documents\visual studio 2015\projects\gargant\gargant\binder.cpp(109): warning C4715: 'Binder::translate': not all control paths return a value
+c:\users\adamj\documents\visual studio 2015\projects\gargant\gargant\binder.cpp(118): warning C4715: 'Binder::translate': not all control paths return a value
+c:\users\adamj\documents\visual studio 2015\projects\gargant\gargant\scripting_engine.cpp(34): warning C4715: 'Scripting_Engine::parse_line': not all control paths return a value
+  Gargant.vcxproj -> C:\Users\adamj\Documents\Visual Studio 2015\Projects\Gargant\Debug\Gargant.exe
+  Gargant.vcxproj -> C:\Users\adamj\Documents\Visual Studio 2015\Projects\Gargant\Debug\Gargant.pdb (Full PDB)

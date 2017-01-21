@@ -1,0 +1,84 @@
+##ROOM::HOME##
+
+##DESCRIPTION##
+A bare stone room with few decorations. Paintings line the walls and there is a small drain in the center of the floor. ?OBJECT::GOLD_KEY? A small golden key lies on the floor. ?OBJECT::GREEN_KEY? A Green Key is in your face ##END## ##END## ?OBJECT::RED_KEY? A small red key is on the floor. ##END## There are no windows, what small light there is comes from beyond the archway leading off into a hallway.
+##END##
+##USE_ERROR##
+The room seems to be put to good use already...
+##END##
+##PICK_UP_ERROR##
+Maybe some day you'll be strong enough for that...
+##END##
+##PUT_DOWN_ERROR##
+The stone room is now on the floor. You diiiiiid it.
+##END##
+##END##
+
+##ROOM::HALLWAY##
+
+##DESCRIPTION##
+A grey stone hallway. Along the walls a series of torches hang, the source of the light you saw before. Before you is the archway from which you entered and beyond you a closed wooden door. There is little of interest here.
+##END##
+##USE_ERROR##
+Hallway? MORE LIKE NO WAY.
+##END##
+##PICK_UP_ERROR##
+Atlas shrugged at your attempt.
+##END##
+##PUT_DOWN_ERROR##
+You truly are an artificer of legend. Now a hallway lies before you!
+##END##
+##END##
+
+##ROOM::LOCKED_ROOM##
+
+##DESCRIPTION##
+A well lit brick room. In the center there is a table with few chairs. On the far side of the room is a locked door ?FLAG::UNLOCKED_DOOR? hanging slightly ajar ##END## .
+##END##
+##USE_ERROR##
+You're not supposed to just use everything you know...
+##END##
+##PICK_UP_ERROR##
+Whyyy?
+##END##
+##PUT_DOWN_ERROR##
+You did it. You picked up the room. Congratulations.
+##END##
+##END##
+
+##ROOM::GOAL##
+
+##DESCRIPTION##
+A room containing a firepace filled with burning treasure. Above it hangs a picture of your god king Adam Hurd.
+##END##
+##USE_ERROR##
+You're not supposed to just use everything you know...
+##END##
+##PICK_UP_ERROR##
+Whyyy?
+##END##
+##PUT_DOWN_ERROR##
+You did it. You picked up the room. Congratulations.
+##END##
+##END##
+
+##EVENT::BEGIN##
+
+##EVENT_TXT##
+You wake up confused in a grey stone room. You don't remember what happened, only a flash of pain and then nothing.
+##END##
+##END##
+
+##EVENT::UNLOCK_DOOR##
+
+##EVENT_TXT##
+You turn the golden key in the door's lock, and it moves inwards a few inches.
+##END##
+##END##
+
+##EVENT::WIN##
+
+##EVENT_TXT##
+You did it you schmoozy mother fucker, this engine is getting more and more polished.
+##END##
+##END##
