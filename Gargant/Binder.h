@@ -1,19 +1,27 @@
 #pragma once
 
 class Binder {
+	Action NULL_ACTION;
+	Room NULL_ROOM;
+	Object NULL_OBJECT;
+	Door NULL_DOOR;
+	Container NULL_CONTAINER;
+
 public:
 	Game_Data* state;
-	Object* Binder::get_Object(std::vector<std::pair<std::string, std::string>>);
-	Object* Binder::get_Object(std::vector<std::pair<std::string, std::string>>, std::vector<Object*>);
+	std::vector<Object*> Binder::filter_object_list(std::vector<std::pair<std::string, std::string>>);
+	std::vector<Object*> Binder::filter_object_list(std::vector<std::pair<std::string, std::string>>, std::vector<Object*>);
 	Action* get_Action(std::string);
 	Door* get_Door(std::string);
 	Room* get_Room(std::string);
-	std::string call(std::vector<std::pair<Token*,std::string>>);
+	std::string call(std::vector<Token*>);
 	std::string bind(std::vector<std::pair<std::string, std::string>>);
 	std::string pick_up(Object*);
 	std::string pick_up(Door*);
+	std::string pick_up(Room*);
 	std::string put_down(Object*);
 	std::string put_down(Door*);
+	std::string put_down(Room*);
 	std::string examine();
 	std::string examine(Room*);
 	std::string examine(Object*);

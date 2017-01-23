@@ -12,6 +12,7 @@
 #include <memory>
 #include <vector>
 #include <iostream>
+#include <sstream>
 #include <string>
 #include <map>
 #include <numeric>

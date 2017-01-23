@@ -1,13 +1,16 @@
 #include "stdafx.h"
 #pragma once
 
+//Honestly this class is an amalgamation of stuff I don't know where to pu- This is the game data class. It has game data.
+
+//Adss an event with a destination to events vector
 Event& Game_Data::add_event(std::string s, std::vector<Flag> req, Room& r) {
 	Room room = r;
 	Event e(s, req, room);
 	events.push_back(e);
 	return events.back();
 }
-
+//adds event with just flag reqs to events vector
 Event& Game_Data::add_event(std::string s, std::vector<Flag> req) {
 	Event e(s, req);
 	events.push_back(e);
@@ -52,7 +55,6 @@ void Game_Data::connect_rooms(int id, Room& to, Room& from, std::string to_name,
 	to.add_door(door_to);
 	from.add_door(door_from);
 }
-
 std::string format(std::string s) {
 	for (auto &c : s) c = tolower(c);
 	return s;
