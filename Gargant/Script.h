@@ -4,6 +4,7 @@ public:
 	std::string 
 		description,
 		use_txt,
+		move_txt,
 		use_error,
 		move_error,
 		pick_up_error,

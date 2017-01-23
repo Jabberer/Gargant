@@ -7,9 +7,8 @@ public:
 	static const int PICK_UP_INDEX = 3;
 	static const int PUT_DOWN_INDEX = 4;
 	std::pair<std::string, std::string> requirements;
-	std::string getname() { return name; }
-	Action() = default;
+	Action() : Action("", 0, {}) {}
 	int index;
 	Action(std::string s, int i, std::pair<std::string, std::string> req = { "","" })
-		:Token(s),requirements(req), index(i) {}
+		:Token(s,"action"),requirements(req), index(i) {}
 };
