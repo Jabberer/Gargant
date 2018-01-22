@@ -2,5 +2,5 @@
 class Flag: public Token{
 public:
 	Flag() = default;
-	Flag(std::string s) : Token(s,"flag") {}
+	Flag(std::string s) : Token(s) {}
 };

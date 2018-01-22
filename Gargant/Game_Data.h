@@ -6,7 +6,7 @@ struct Game_Data {
 	std::vector<Action> action_list;
 	std::vector<Flag> flags_obtained;
 	std::vector<Puzzle> puzzles;
-	std::vector<std::string> word_pairs = { "pick up", "put down", "locked room", "wooden door", "secure door", "gold key"};
+	std::vector<std::string> word_pairs = { "pick up", "put down", "locked room", "wooden door", "secure door"};
 	Room *current;
 	Object* focus;
 	int quit = 0;

@@ -2,75 +2,33 @@
 #pragma once
 
 void Scripting_Engine::update() {
-	assign(state.current);
-	for (auto &el : state.current->doors) {
+	for (auto el : state.game_map) {
 		assign(el);
 	}
 	for (auto &el : state.events) {
 		assign(el);
 	}
-	for (auto &el : state.inventory) {
-		assign(el);
-	}
-	for (auto &el : state.current->room_objects) {
-		assign(el);
-	}
 }
 
-std::string Scripting_Engine::parse_line(std::ifstream& istream, bool prev_condition = true) {
-	std::string word, true_txt, false_txt;
-	bool condition = true, txt_switch = true;
+std::string Scripting_Engine::parse_line(std::ifstream& istream) {
+	std::string word, temp;
+	bool condition = true;
 	while (istream >> word) {
 		if (word == END) {
-			return prev_condition? true_txt : false_txt;
-		}
-		else if (word == CONDITIONAL) {
-			txt_switch = !txt_switch;
+			return temp;
 		}
 		else {
 			if (word[0] == '?') {
 				condition = resolve_condition(word);
-				word = "";
-				word += parse_line(istream,condition);
+				istream >> word;
+				word += " " + parse_line(istream);
 			}
-			if (txt_switch==true) {
-				if (true_txt == "" || true_txt.back() == ' ')
-					true_txt += word;
-				else true_txt += " " + word;
-			}
-			else if (txt_switch == false) {
-				if (false_txt == "" || false_txt.back() == ' ')
-					false_txt += word;
-				else false_txt += " " + word;
+			if (condition) {
+				if (temp == "" || temp.back() == ' ')
+					temp += word;
+				else temp += " " + word;
 			}
 			else condition = true;
-		}
-	}
-}
-
-void Scripting_Engine::resolve_queries(std::string& s) {
-	size_t pos = s.find(QUERY_DESTINATION);
-	if (pos != s.npos)
-	s.replace(pos, size(QUERY_DESTINATION), state.current->get_name());
-}
-
-void Scripting_Engine::resolve_errors(std::string &s) {
-	std::stringstream sstream(s);
-	std::string temp, newstr, goo;
-	sstream >> temp;
-	sstream >> goo;
-	if (temp.find(ERROR) != temp.npos) {
-		if (sstream.eof()) {
-			s = "You can't do that";
-		}
-		else {
-			newstr = s.substr(temp.size());
-			size_t beg_pos = newstr.find(temp);
-			if (beg_pos != newstr.npos) {
-				temp = newstr.substr(beg_pos + temp.size() + 1);
-				size_t end_pos = temp.find_first_of("//");
-				s = temp.substr(0, end_pos);
-			}
 		}
 	}
 }
@@ -90,9 +48,6 @@ Script Scripting_Engine::generate_script(std::string name) {
 			}
 			else if (line == USE_TXT) {
 				focus = &script.use_txt;
-			}
-			else if (line == MOVE_TXT) {
-				focus = &script.move_txt;
 			}
 			else if (line == USE_ERROR) {
 				focus = &script.use_error;
@@ -172,21 +127,11 @@ std::string Scripting_Engine::caps(std::string name) {
 }
 
 void Scripting_Engine::assign(Room* room) {
-	std::string name = "--ROOM::" + format_name(room->get_name()) + "--";
+	std::string name = "##ROOM::" + format_name(room->get_name()) + "##";
 	room->assign_script(generate_script(name));
 }
 
 void Scripting_Engine::assign(Event& e) {
-	std::string name = "--EVENT::" + format_name(e.get_name()) + "--";
+	std::string name = "##EVENT::" + format_name(e.get_name()) + "##";
 	e.assign_script(generate_script(name));
-}
-
-void Scripting_Engine::assign(Door& door) {
-	std::string name = "--DOOR::" + format_name(door.get_name()) + "--";
-	door.assign_script(generate_script(name));
-}
-
-void Scripting_Engine::assign(Object& obj) {
-	std::string name = "--OBJECT::" + format_name(obj.get_name()) + "--";
-	obj.assign_script(generate_script(name));
 }

@@ -23,7 +23,7 @@ int main() {
 	room_description = b.examine() + '\n';
 	sf::RenderWindow window;
 	window.setVerticalSyncEnabled(true);
-	window.create(sf::VideoMode(1280, 720), "Gargant");
+	window.create(sf::VideoMode(1280, 720), "My window");
 	sf::Font font;
 	int line = 0;
 	if (!font.loadFromFile("arial.ttf"))
@@ -131,8 +131,6 @@ int main() {
 			event_txt = event_handler.process_events();
 			if (event_txt != "")
 				event_txt += "\n\n";
-			scripting_engine.resolve_errors(command_respone);
-			scripting_engine.resolve_queries(command_respone);
 			room_description = b.examine() + "\n\n";
 			output = event_txt + room_description + command_respone;
 			input = "";
