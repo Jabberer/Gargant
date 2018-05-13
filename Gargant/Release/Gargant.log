@@ -1,0 +1,35 @@
+﻿  stdafx.cpp
+c:\users\kaine\documents\github\gar\gargant\gargant\game_data.h(2): warning C4099: 'Game_Data': type name first seen using 'class' now seen using 'struct'
+  c:\users\kaine\documents\github\gar\gargant\gargant\game_data.h(2): note: see declaration of 'Game_Data'
+  Binder.cpp
+  Event_Handler.cpp
+  Game_Data.cpp
+  Gargant.cpp
+c:\users\kaine\documents\github\gar\gargant\gargant\gargant.cpp(37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\kaine\documents\github\gar\gargant\gargant\gargant.cpp(39): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\kaine\documents\github\gar\gargant\gargant\gargant.cpp(142): warning C4018: '<': signed/unsigned mismatch
+c:\users\kaine\documents\github\gar\gargant\gargant\gargant.cpp(148): warning C4244: '+=': conversion from 'float' to 'unsigned int', possible loss of data
+c:\users\kaine\documents\github\gar\gargant\gargant\gargant.cpp(159): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\kaine\documents\github\gar\gargant\gargant\gargant.cpp(160): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\kaine\documents\github\gar\gargant\gargant\gargant.cpp(165): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\kaine\documents\github\gar\gargant\gargant\gargant.cpp(166): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\kaine\documents\github\gar\gargant\gargant\gargant.cpp(167): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\kaine\documents\github\gar\gargant\gargant\gargant.cpp(168): warning C4018: '>': signed/unsigned mismatch
+c:\users\kaine\documents\github\gar\gargant\gargant\gargant.cpp(170): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  grammar.cpp
+  init.cpp
+  Parser.cpp
+c:\users\kaine\documents\github\gar\gargant\gargant\parser.cpp(8): warning C4018: '<': signed/unsigned mismatch
+  Puzzle.cpp
+  Scripting_Engine.cpp
+  Token.cpp
+  Tokenizer.cpp
+  Generating code
+c:\users\kaine\documents\github\gar\gargant\gargant\binder.cpp(126): warning C4715: 'Binder::translate': not all control paths return a value
+c:\users\kaine\documents\github\gar\gargant\gargant\binder.cpp(111): warning C4715: 'Binder::translate': not all control paths return a value
+c:\users\kaine\documents\github\gar\gargant\gargant\binder.cpp(99): warning C4715: 'Binder::translate': not all control paths return a value
+c:\users\kaine\documents\github\gar\gargant\gargant\binder.cpp(91): warning C4715: 'Binder::translate': not all control paths return a value
+c:\users\kaine\documents\github\gar\gargant\gargant\scripting_engine.cpp(49): warning C4715: 'Scripting_Engine::parse_line': not all control paths return a value
+  All 1917 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  Gargant.vcxproj -> C:\Users\Kaine\Documents\GitHub\Gar\Gargant\Release\Gargant.exe

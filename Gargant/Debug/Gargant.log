@@ -1,7 +1,0 @@
-﻿  Binder.cpp
-c:\users\adamj\source\repos\gargant\gargant\binder.cpp(91): warning C4715: 'Binder::translate': not all control paths return a value
-c:\users\adamj\source\repos\gargant\gargant\binder.cpp(99): warning C4715: 'Binder::translate': not all control paths return a value
-c:\users\adamj\source\repos\gargant\gargant\binder.cpp(111): warning C4715: 'Binder::translate': not all control paths return a value
-c:\users\adamj\source\repos\gargant\gargant\binder.cpp(126): warning C4715: 'Binder::translate': not all control paths return a value
-  Gargant.vcxproj -> C:\Users\adamj\Source\Repos\Gargant\Debug\Gargant.exe
-  Gargant.vcxproj -> C:\Users\adamj\Source\Repos\Gargant\Debug\Gargant.pdb (Full PDB)
